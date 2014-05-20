@@ -56,6 +56,16 @@ $(function(){
       $topbar.removeClass("top-bar-hero");
     }
   };
+  
+  jQuery.event.add(window, "load", resizeFrame);
+  jQuery.event.add(window, "resize", resizeFrame);
+
+  function resizeFrame() 
+  {
+			var h = $(window).height();
+			var w = $(window).width();
+			$("iframe").css('height', h - 400);
+  }
 
   $(document).foundation();
   initHandlers();

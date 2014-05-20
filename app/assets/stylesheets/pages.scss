@@ -135,3 +135,11 @@
 .no-margin{
 	margin : 0px !important;
 }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  max-height : 500px !important;
+  min-height : 215px !important; 
+}
