@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Butterfleye</title>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%# <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= render 'layouts/header' unless @skip_header %>
+    <%= yield %>
+    <%= render 'layouts/footer' unless @skip_footer %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield :javascript %>
+  </body>
+</html>

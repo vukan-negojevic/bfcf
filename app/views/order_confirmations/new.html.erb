@@ -1,0 +1,21 @@
+<% content_for :javascript do %>
+  <%= popup_widget_script.html_safe %>
+<% end %>
+
+<div class="section section-order-confirmation">
+  <div class="row text-center row-section-title">
+    <h2>Thanks for your order!</h2>
+  </div>
+  <div class="row">
+    <div class="columns small-centered small-10">
+      You'll receive an email confirmation shortly for your records.
+    </div>
+  </div>
+  <div class="row row-return-link">
+    <div class="columns small-centered small-10">
+      <%= link_to "Back to home page", root_url %>
+    </div>
+  </div>
+</div>
+
+<%= popup_widget_div(@order_hash).html_safe %>

@@ -1,0 +1,19 @@
+/* main theme colors */
+$color-purple: #343388;
+$color-light-blue: #049AC7;
+$color-yellow: #F8C300;
+$color-orange: #F87700;
+
+
+$color-white: #FFF;
+$color-grey-lightest: #BBB;
+$color-grey-medium: #888;
+$color-grey-darkest: #1d2224;
+$color-black: #000;
+
+$color-text-light: $color-white;
+$color-text-dim: $color-grey-lightest;
+$color-text-dark: $color-grey-darkest;
+
+$color-topbar: transparentize($color-white, 0.1);
+$color-footer: $color-black;

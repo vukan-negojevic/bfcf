@@ -1,0 +1,133 @@
+@mixin transition-duration($duration) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform:    $value;
+  -ms-transform:     $value;
+  -o-transform:      $value;
+  transform:         $value;
+}
+
+.section-faq-intro, .section-about-intro {
+  position: relative;
+  min-height: 300px;
+  .row-section-title {
+    padding-top: 120px;
+  }
+}
+
+.section-faq-intro {
+  @include scaling-background-image(image-url('header-faq.jpg'));
+}
+
+.section-about-intro {
+  @include scaling-background-image(image-url('header-about.jpg'));
+}
+
+.section-faq, .section-about {
+  @include section-light;
+}
+
+.section-page {
+  p {
+    font-size: 16px;
+  }
+}
+
+.section-faq {
+  .question {
+    display: block;
+    margin-top: 20px;
+    height: 45px;
+    color: $color-light-blue;
+
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .question-arrow-container {
+    display: inline-block;
+    width: 30px;
+  }
+  .question-arrow {
+    display: inline-block;
+    @include transition-duration(500ms);
+  }
+
+  .question.active .question-arrow {
+    @include transform(rotate(90deg));
+  }
+
+  .question-text {
+  }
+
+  .answer {
+    padding-left: 30px;
+  }
+
+  padding-bottom: 40px;
+}
+
+.section-about{
+  padding: 40px 0px;
+  margin-bottom: 40px;
+  h4{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  h4.name{
+    color: $color-light-blue;
+    text-decoration: none;
+    text-align:center;
+  }
+  h5{
+    text-transform:uppercase;
+    text-align:center;
+    color: #8f9091;
+    font-style: italic;
+
+  }
+  a {
+    color: $color-light-blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  img {
+    border-radius: 50%;
+    width: 55%;
+    margin-top:30px;
+  }
+}
+
+.section-docs{
+  @include section-light;
+  padding: 40px 0px;
+  h1 {
+    text-align: center;
+  }
+  h4{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  span {
+    text-decoration:underline;
+  }
+  a {
+    color: $color-light-blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  ul{
+    li {
+      @include p;
+    }
+  }
+}

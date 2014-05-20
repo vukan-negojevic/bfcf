@@ -1,0 +1,32 @@
+<div class="section section-faq-intro">
+  <div class="overlay-yellow"></div>
+  <div class="row text-center row-section-title">
+    <div class="small-12 columns">
+      <h3>FAQ</h3>
+    </div>
+  </div>
+</div>
+
+<div class="section section-page section-faq">
+  <div class="row">
+    <div class="columns small-centered small-10">
+
+      <% @faq.each do |q_and_a| %>
+        <div class="qna">
+          <a class="question" href="#">
+            <span class="question-arrow-container">
+              <span class="question-arrow"><i class="fa fa-play"></i></span>
+            </span>
+            <span class="question-text">
+              <%= q_and_a["q"] %>
+            </span>
+          </a>
+          <div class="answer">
+              <%= q_and_a["a"] %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

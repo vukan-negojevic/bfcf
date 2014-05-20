@@ -1,0 +1,11 @@
+@import "colors";
+
+$topbar-bg: $color-topbar;
+$topbar-height: 60px;
+
+$primary-color: $color-orange;
+$anchor-font-color: $color-white;
+$anchor-font-color-hover: scale-color($color-white, $lightness: -14%);
+
+$button-radius: 10px;
+$body-font-family: 'Open Sans', sans-serif;

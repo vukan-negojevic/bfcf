@@ -1,0 +1,80 @@
+@mixin transition($value) {
+   transition: $value;
+   -ms-transition: $value;
+   -moz-transition: $value;
+   -webkit-transition: $value;
+}
+
+
+// BUTTON
+
+.button {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+@mixin button-transparent {
+  background-color: transparent;
+  border: 3px solid $color-white;
+
+  &:hover {
+    background-color: darken($primary-color, 8%);
+  }
+}
+
+.button-jumbo {
+  padding-top: 19px !important;
+  padding-bottom: 19px !important;
+}
+
+.header-button {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  margin-right: 20px;
+  top: 0px !important;
+  border: 3px solid transparent;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// TOP BAR
+
+.top-bar, .topbar-logo, .header-button {
+  transition: all 0.5s ease;
+}
+
+@mixin topbar-logo {
+  @media #{$small-up} {
+    background-size: 170px auto;
+    width: 190px;
+  }
+  @media #{$medium-up} {
+    background-size: 230px auto;
+    width: 250px;
+  }
+
+  margin-left: 20px !important;
+}
+
+.topbar-logo {
+  @include topbar-logo;
+  background: image-url('logo-color.png') no-repeat left;
+}
+
+.top-bar.top-bar-hero {
+  background: transparent;
+
+  .header-button {
+    @include button-transparent;
+  }
+
+  .topbar-logo {
+    @include topbar-logo;
+    background: image-url('logo-white.png') no-repeat left;
+  }
+}
